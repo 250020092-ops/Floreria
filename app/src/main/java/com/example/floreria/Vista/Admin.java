@@ -1,4 +1,5 @@
 package com.example.floreria.Vista;
+//pantalla del panel de administracion
 
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
