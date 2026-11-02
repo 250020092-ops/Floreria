@@ -1,4 +1,5 @@
 package com.example.floreria.Vista;
+//Pantalla de inicio de sesion
 
 import android.content.Intent;
 import android.os.Bundle;
