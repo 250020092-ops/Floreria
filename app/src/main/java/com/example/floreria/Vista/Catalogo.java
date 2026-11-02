@@ -1,5 +1,5 @@
 package com.example.floreria.Vista;
-
+//pantalla de catalogo de productos
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
