@@ -2,4 +2,12 @@
     <string name="app_name">Florería Las Amiguitas</string>
     <string name="nombre_floreria">Las Amiguitas</string>
     <string name="eslogan">Flores que dicen lo que sientes</string>
+
+    <!-- Pantalla de inicio de sesión -->
+    <string name="login_titulo">Iniciar sesión</string>
+    <string name="login_correo">Correo electrónico</string>
+    <string name="login_clave">Contraseña</string>
+    <string name="login_boton">Iniciar sesión</string>
+    <string name="login_registro">¿No tienes cuenta? Regístrate</string>
+    <string name="descripcion_logo">Logotipo de Florería Las Amiguitas</string>
 </resources>
