@@ -10,7 +10,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import ActivityAdmin.Admin;
+import com.example.floreria.controlador.administracion.Admin;
 import com.example.floreria.controlador.catalogo.Catalogo;
 import com.example.floreria.modelo.Usuario;
 import com.example.floreria.R;
