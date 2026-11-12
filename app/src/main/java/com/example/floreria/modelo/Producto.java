@@ -1,4 +1,4 @@
-package com.example.floreria.Modelo;
+package com.example.floreria.modelo;
 
 // Datos de un arreglo floral del catálogo
 public class Producto {

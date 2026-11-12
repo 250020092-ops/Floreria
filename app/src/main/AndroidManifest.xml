@@ -8,19 +8,19 @@
         android:theme="@style/Theme.Floreria">
 
         <activity
-            android:name=".Vista.Admin"
+            android:name="ActivityAdmin.Admin"
             android:exported="false" />
 
         <activity
-            android:name=".Vista.Catalogo"
+            android:name=".controlador.catalogo.Catalogo"
             android:exported="false" />
 
         <activity
-            android:name=".Vista.Registro"
+            android:name=".controlador.autenticacion.Registro"
             android:exported="false" />
 
         <activity
-            android:name=".Vista.Login"
+            android:name=".controlador.autenticacion.Login"
             android:exported="true">
 
             <intent-filter>

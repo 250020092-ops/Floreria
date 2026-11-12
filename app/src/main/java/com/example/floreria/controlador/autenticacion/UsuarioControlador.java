@@ -1,7 +1,8 @@
-package com.example.floreria.Controlador;
+package com.example.floreria.controlador.autenticacion;
 
-import com.example.floreria.Modelo.Repositorio;
-import com.example.floreria.Modelo.Usuario;
+import com.example.floreria.controlador.Validador;
+import com.example.floreria.modelo.Repositorio;
+import com.example.floreria.modelo.Usuario;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -1,4 +1,4 @@
-package com.example.floreria.Controlador;
+package com.example.floreria.controlador;
 
 import android.util.Patterns;
 

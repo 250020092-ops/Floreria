@@ -1,7 +1,7 @@
-package com.example.floreria.Controlador;
+package com.example.floreria.controlador;
 
-import com.example.floreria.Modelo.Producto;
-import com.example.floreria.Modelo.Repositorio;
+import com.example.floreria.modelo.Producto;
+import com.example.floreria.modelo.Repositorio;
 
 import java.util.ArrayList;
 import java.util.HashMap;

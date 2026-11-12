@@ -1,4 +1,4 @@
-package com.example.floreria.Vista;
+package com.example.floreria.controlador.catalogo;
 //pantalla de catalogo de productos
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
@@ -8,8 +8,8 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.floreria.Controlador.ProductoControlador;
-import com.example.floreria.Modelo.Producto;
+import com.example.floreria.controlador.ProductoControlador;
+import com.example.floreria.modelo.Producto;
 import com.example.floreria.R;
 
 import java.util.ArrayList;

@@ -1,5 +1,5 @@
-package com.example.floreria.Vista;
-//pantalla del panel de administracion
+package com.example.floreria.controlador.administracion;
+// Pantalla del panel de administración
 
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
@@ -11,9 +11,9 @@ import android.widget.Toast;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.floreria.Controlador.ProductoControlador;
-import com.example.floreria.Modelo.Producto;
 import com.example.floreria.R;
+import com.example.floreria.controlador.ProductoControlador;
+import com.example.floreria.modelo.Producto;
 import com.google.android.material.textfield.TextInputLayout;
 
 import java.util.ArrayList;
@@ -21,7 +21,7 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 
-// Vista del administrador: alta y baja de productos
+// Pantalla del administrador: alta y baja de productos
 public class Admin extends AppCompatActivity {
 
     private ProductoControlador controlador;
