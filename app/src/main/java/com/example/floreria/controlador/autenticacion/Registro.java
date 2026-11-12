@@ -1,52 +1,87 @@
-package com.example.floreria.controlador.autenticacion;
+package com.example.floreria.Vista;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.widget.Button;
-import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.floreria.R;
+import com.example.floreria.Controlador.UsuarioControlador;
+import com.google.android.material.button.MaterialButton;
+import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 
-import java.util.Map;
-
-// Vista de registro: captura los datos y muestra los errores
+/** Pantalla 2: Registro. Solo recoge datos; la lógica vive en UsuarioControlador. */
 public class Registro extends AppCompatActivity {
+
+    private TextInputLayout tilNombre, tilCorreo, tilClave, tilConfirmar;
+    private TextInputEditText etNombre, etCorreo, etClave, etConfirmar;
+    private UsuarioControlador controlador;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registro);
 
-        UsuarioControlador controlador = new UsuarioControlador();
+        controlador = new UsuarioControlador(this);
 
-        EditText etNombre = findViewById(R.id.etNombre);
-        EditText etCorreo = findViewById(R.id.etCorreo);
-        EditText etClave = findViewById(R.id.etClave);
-        TextInputLayout tilNombre = findViewById(R.id.tilNombre);
-        TextInputLayout tilCorreo = findViewById(R.id.tilCorreo);
-        TextInputLayout tilClave = findViewById(R.id.tilClave);
-        Button btnRegistrar = findViewById(R.id.btnRegistrar);
+        tilNombre = findViewById(R.id.tilNombreReg);
+        tilCorreo = findViewById(R.id.tilCorreoReg);
+        tilClave = findViewById(R.id.tilClaveReg);
+        tilConfirmar = findViewById(R.id.tilConfirmarReg);
+        etNombre = findViewById(R.id.etNombreReg);
+        etCorreo = findViewById(R.id.etCorreoReg);
+        etClave = findViewById(R.id.etClaveReg);
+        etConfirmar = findViewById(R.id.etConfirmarReg);
 
-        btnRegistrar.setOnClickListener(v -> {
-            String nombre = etNombre.getText().toString().trim();
-            String correo = etCorreo.getText().toString().trim();
-            String clave = etClave.getText().toString();
+        MaterialButton btnCrear = findViewById(R.id.btnCrearCuenta);
+        TextView tvVolver = findViewById(R.id.tvVolverLogin);
 
-            // El controlador valida y registra; devuelve los errores por campo
-            Map<String, String> errores = controlador.registrar(nombre, correo, clave);
+        btnCrear.setOnClickListener(v -> crearCuenta());
+        tvVolver.setOnClickListener(v -> volverAlLogin());
+    }
 
-            // Asignar null borra el mensaje anterior
-            tilNombre.setError(errores.get("nombre"));
-            tilCorreo.setError(errores.get("correo"));
-            tilClave.setError(errores.get("clave"));
+    private void crearCuenta() {
+        // Limpia errores anteriores
+        tilNombre.setError(null);
+        tilCorreo.setError(null);
+        tilClave.setError(null);
+        tilConfirmar.setError(null);
 
-            if (errores.isEmpty()) {
-                Toast.makeText(this, "Cuenta creada correctamente", Toast.LENGTH_SHORT).show();
-                finish(); // vuelve a la pantalla anterior
-            }
-        });
+        String nombre = textoDe(etNombre);
+        String correo = textoDe(etCorreo);
+        String clave = textoDe(etClave);
+        String confirmar = textoDe(etConfirmar);
+
+        // El controlador valida y guarda; devuelve null si todo salió bien
+        String error = controlador.registrar(nombre, correo, clave, confirmar);
+
+        if (error == null) {
+            Toast.makeText(this, "Cuenta creada. Inicia sesión", Toast.LENGTH_SHORT).show();
+            volverAlLogin();
+        } else {
+            mostrarError(error);
+        }
+    }
+
+    /** Pone el mensaje en el campo que corresponde según su contenido. */
+    private void mostrarError(String error) {
+        String e = error.toLowerCase();
+        if (e.contains("nombre")) tilNombre.setError(error);
+        else if (e.contains("correo")) tilCorreo.setError(error);
+        else if (e.contains("coinciden") || e.contains("confirm")) tilConfirmar.setError(error);
+        else if (e.contains("contrase")) tilClave.setError(error);
+        else Toast.makeText(this, error, Toast.LENGTH_LONG).show();
+    }
+
+    private void volverAlLogin() {
+        startActivity(new Intent(this, Login.class));
+        finish();
+    }
+
+    private String textoDe(TextInputEditText et) {
+        return et.getText() == null ? "" : et.getText().toString().trim();
     }
 }

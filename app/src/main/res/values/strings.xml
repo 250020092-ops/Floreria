@@ -1,13 +1,29 @@
-<resources>
-    <string name="app_name">Florería Las Amiguitas</string>
-    <string name="nombre_floreria">Las Amiguitas</string>
-    <string name="eslogan">Flores que dicen lo que sientes</string>
+<!-- Registro -->
+<string name="reg_titulo">Crear cuenta</string>
+<string name="reg_nombre">Nombre completo</string>
+<string name="reg_correo">Correo electrónico</string>
+<string name="reg_clave">Contraseña</string>
+<string name="reg_confirmar">Confirmar contraseña</string>
+<string name="reg_boton">Crear cuenta</string>
+<string name="reg_volver">¿Ya tienes cuenta? Inicia sesión</string>
 
-    <!-- Pantalla de inicio de sesión -->
-    <string name="login_titulo">Iniciar sesión</string>
-    <string name="login_correo">Correo electrónico</string>
-    <string name="login_clave">Contraseña</string>
-    <string name="login_boton">Iniciar sesión</string>
-    <string name="login_registro">¿No tienes cuenta? Regístrate</string>
-    <string name="descripcion_logo">Logotipo de Florería Las Amiguitas</string>
-</resources>
+    <!-- Catálogo -->
+<string name="cat_titulo">Nuestros arreglos florales</string>
+<string name="cat_salir">Salir</string>
+<string name="cat_agregar">Agregar</string>
+<string name="cat_carrito">Seleccionados: %1$d</string>
+<string name="cat_vacio">Aún no hay arreglos disponibles</string>
+<string name="descripcion_producto">Imagen del arreglo floral</string>
+
+    <!-- Administración -->
+<string name="admin_titulo">Panel de administración</string>
+<string name="admin_nuevo">Nuevo producto</string>
+<string name="admin_nombre">Nombre del producto</string>
+<string name="admin_descripcion">Descripción</string>
+<string name="admin_precio">Precio</string>
+<string name="admin_guardar">Guardar</string>
+<string name="admin_cancelar">Cancelar edición</string>
+<string name="admin_registrados">Productos registrados</string>
+<string name="admin_editar">Editar</string>
+<string name="admin_eliminar">Eliminar</string>
+<string name="admin_salir">Salir</string>

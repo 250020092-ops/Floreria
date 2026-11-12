@@ -1,43 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Pantalla 3: Catálogo de flores -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="20dp"
-    android:background="#FFF0F5">
+    android:background="@color/rosa_fondo"
+    android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/tvBienvenida"
+    <!-- Encabezado -->
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Welcome!"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        android:textColor="#E91E63"
-        android:padding="15dp"/>
+        android:background="@color/rosa_fuerte"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:contentDescription="@string/descripcion_logo"
+            android:src="@drawable/ic_logo_flor" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/nombre_floreria"
+                android:textColor="#FFFFFF"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvCarrito"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FFFFFF"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvSalirCatalogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="@string/cat_salir"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+    </LinearLayout>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Flower Catalog"
+        android:padding="16dp"
+        android:text="@string/cat_titulo"
+        android:textColor="@color/rosa_oscuro"
         android:textSize="20sp"
-        android:textStyle="bold"
-        android:textColor="#AD1457"
-        android:padding="10dp"/>
+        android:textStyle="bold" />
 
-    <ListView
-        android:id="@+id/lvProductos"
+    <TextView
+        android:id="@+id/tvVacioCatalogo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="24dp"
+        android:text="@string/cat_vacio"
+        android:textColor="@color/texto_secundario"
+        android:visibility="gone" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvCatalogo"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:divider="#F8BBD0"
-        android:dividerHeight="1dp"/>
-
-    <Button
-        android:id="@+id/btnSalir"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="LOG OUT"
-        android:backgroundTint="#E91E63"/>
-
+        android:clipToPadding="false"
+        android:padding="8dp" />
 </LinearLayout>
