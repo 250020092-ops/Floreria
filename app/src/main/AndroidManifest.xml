@@ -8,12 +8,10 @@
         android:theme="@style/Theme.Floreria">
 
         <activity
-            android:name="ActivityAdmin.Admin"
-            android:exported="false" />
+            android:name=".controlador.administracion.Admin"            android:exported="false" />
 
         <activity
-            android:name=".controlador.catalogo.Catalogo"
-            android:exported="false" />
+            android:name=".controlador.catalogo.Catalogo"            android:exported="false" />
 
         <activity
             android:name=".controlador.autenticacion.Registro"
