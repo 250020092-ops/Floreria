@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">Floreria</string>
+    <string name="app_name">Florería Las Amiguitas</string>
+    <string name="nombre_floreria">Las Amiguitas</string>
+    <string name="eslogan">Flores que dicen lo que sientes</string>
 </resources>
