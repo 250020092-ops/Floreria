@@ -41,6 +41,12 @@ public class Validador {
         return null;
     }
 
+    public static String confirmar(String clave, String confirmar) {
+        if (confirmar.isEmpty()) return "Confirma tu contraseña";
+        if (!clave.equals(confirmar)) return "Las contraseñas no coinciden";
+        return null;
+    }
+
     public static String nombreProducto(String texto) {
         if (texto.isEmpty()) return "Escribe el nombre del arreglo";
         return null;

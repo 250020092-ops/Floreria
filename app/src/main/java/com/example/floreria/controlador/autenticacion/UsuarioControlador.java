@@ -12,16 +12,18 @@ public class UsuarioControlador {
 
     // Valida los datos y registra al usuario.
     // Devuelve un mapa campo -> error; si viene vacío, el registro fue exitoso
-    public Map<String, String> registrar(String nombre, String correo, String clave) {
+    public Map<String, String> registrar(String nombre, String correo, String clave, String confirmar) {
         Map<String, String> errores = new HashMap<>();
 
         String errorNombre = Validador.nombre(nombre);
         String errorCorreo = Validador.correo(correo);
         String errorClave = Validador.clave(clave);
+        String errorConfirmar = Validador.confirmar(clave, confirmar);
 
         if (errorNombre != null) errores.put("nombre", errorNombre);
         if (errorCorreo != null) errores.put("correo", errorCorreo);
         if (errorClave != null) errores.put("clave", errorClave);
+        if (errorConfirmar != null) errores.put("confirmar", errorConfirmar);
 
         // Solo se intenta guardar si todos los campos son válidos
         if (errores.isEmpty() && !Repositorio.agregarUsuario(nombre, correo, clave)) {

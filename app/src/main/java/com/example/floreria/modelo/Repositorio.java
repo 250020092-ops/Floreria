@@ -15,7 +15,7 @@ public class Repositorio {
 
     // Se ejecuta una sola vez: carga el administrador y productos de ejemplo
     static {
-        usuarios.add(new Usuario(1, "Administrador", "admin@blossom.com", "admin123", "admin"));
+        usuarios.add(new Usuario(1, "Administrador", "admin@lasamiguitas.com", "admin123", "admin"));
 
         productos.add(new Producto(1, "Ramo de rosas", "12 rosas rosadas con follaje", 350.0));
         productos.add(new Producto(2, "Girasoles", "Ramo de 6 girasoles", 280.0));
@@ -46,6 +46,16 @@ public class Repositorio {
     // Agrega el producto al inicio de la lista
     public static void agregarProducto(String nombre, String descripcion, double precio) {
         productos.add(0, new Producto(siguienteIdProducto++, nombre, descripcion, precio));
+    }
+
+    // Reemplaza un producto conservando su id y su posición
+    public static void editarProducto(int id, String nombre, String descripcion, double precio) {
+        for (int i = 0; i < productos.size(); i++) {
+            if (productos.get(i).id == id) {
+                productos.set(i, new Producto(id, nombre, descripcion, precio));
+                return;
+            }
+        }
     }
 
     // Elimina un producto por su id

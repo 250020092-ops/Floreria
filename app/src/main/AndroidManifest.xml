@@ -8,10 +8,12 @@
         android:theme="@style/Theme.Floreria">
 
         <activity
-            android:name=".controlador.administracion.Admin"            android:exported="false" />
+            android:name=".controlador.administracion.Admin"
+            android:exported="false" />
 
         <activity
-            android:name=".controlador.catalogo.Catalogo"            android:exported="false" />
+            android:name=".controlador.catalogo.Catalogo"
+            android:exported="false" />
 
         <activity
             android:name=".controlador.autenticacion.Registro"
@@ -20,13 +22,10 @@
         <activity
             android:name=".controlador.autenticacion.Login"
             android:exported="true">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
 
     </application>
