@@ -1,3 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Floreria</string>
+    <string name="app_name">Las Amiguitas</string>
+    <string name="nombre_floreria">Las Amiguitas</string>
+    <string name="descripcion_logo">Logo de Las Amiguitas</string>
+
+    <!-- Login -->
+    <string name="login_titulo">Iniciar sesión</string>
+    <string name="login_correo">Correo electrónico</string>
+    <string name="login_clave">Contraseña</string>
+    <string name="login_boton">Ingresar</string>
+    <string name="login_registro">¿No tienes cuenta? Regístrate</string>
+
+    <!-- Splash / Bienvenida -->
+    <string name="splash_tagline">FLORES QUE CREAN RECUERDOS</string>
+    <string name="splash_titulo">Haz especial cada momento</string>
+    <string name="splash_subtitulo">Arreglos únicos hechos a mano, con flores frescas y mucho cariño.</string>
+    <string name="splash_comenzar">Comenzar →</string>
+    <string name="splash_ya_tengo_cuenta">Ya tengo una cuenta</string>
+    <string name="splash_footer">FLORERÍA LOCAL - DETALLES CON CORAZÓN</string>
+
+    <!-- Registro -->
+    <string name="reg_titulo">Crear cuenta</string>
+    <string name="reg_nombre">Nombre completo</string>
+    <string name="reg_correo">Correo electrónico</string>
+    <string name="reg_clave">Contraseña</string>
+    <string name="reg_confirmar">Confirmar contraseña</string>
+    <string name="reg_boton">Crear cuenta</string>
+    <string name="reg_volver">¿Ya tienes cuenta? Inicia sesión</string>
+    <string name="reg_eyebrow">CREA TU CUENTA</string>
+    <string name="reg_bienvenida">Bienvenida a bordo</string>
+    <string name="reg_subtitulo">Regístrate para continuar a tu espacio.</string>
+    <string name="reg_ejemplo_correo">hola@ejemplo.com</string>
+    <string name="reg_boton_flecha">Crear cuenta →</string>
+
+    <!-- Catálogo -->
+    <string name="cat_titulo">Nuestros arreglos florales</string>
+    <string name="cat_salir">Salir</string>
+    <string name="cat_agregar">Agregar</string>
+    <string name="cat_carrito">Seleccionados: %1$d</string>
+    <string name="cat_vacio">Aún no hay arreglos disponibles</string>
+    <string name="descripcion_producto">Imagen del arreglo floral</string>
+    <string name="cat_coleccion">NUESTRA COLECCIÓN</string>
+    <string name="cat_subtitulo_coleccion">Encuentra el ramo perfecto</string>
+    <string name="cat_buscar_hint">🔍 Buscar flores, ocasión…</string>
+    <string name="cat_chip_todos">Todos</string>
+    <string name="cat_chip_rosas">🌹 Rosas</string>
+    <string name="cat_chip_cumpleanos">🎁 Cumpleaños</string>
+    <string name="cat_chip_especial">✨ Especial</string>
+    <string name="cat_ocasion_titulo">ELIGE LA OCASIÓN</string>
+    <string name="cat_ocasion_sub">Un detalle para cada momento</string>
+    <string name="cat_mas_queridos">Los más queridos</string>
+    <string name="cat_ver_todos">Ver todos →</string>
+    <string name="flor_acento_desc">Flor de acento</string>
+    <string name="flor_fresca_tag">FLOR FRESCA</string>
+
+    <!-- Administración -->
+    <string name="admin_titulo">Panel de administración</string>
+    <string name="admin_nuevo">Nuevo producto</string>
+    <string name="admin_nombre">Nombre del producto</string>
+    <string name="admin_descripcion">Descripción</string>
+    <string name="admin_precio">Precio</string>
+    <string name="admin_guardar">Guardar</string>
+    <string name="admin_cancelar">Cancelar edición</string>
+    <string name="admin_registrados">Productos registrados</string>
+    <string name="admin_editar">Editar</string>
+    <string name="admin_eliminar">Eliminar</string>
+    <string name="admin_salir">Salir</string>
+    <string name="admin_editando">Editar arreglo</string>
+    <string name="eslogan">Arreglos florales con amor</string>
 </resources>

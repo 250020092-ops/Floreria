@@ -1,8 +1,8 @@
-package com.example.floreria.Vista;
-//Pantalla de inicio de sesion
+package com.example.floreria.controlador.autenticacion;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -10,14 +10,15 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.floreria.Controlador.UsuarioControlador;
-import com.example.floreria.Modelo.Usuario;
 import com.example.floreria.R;
+import com.example.floreria.controlador.administracion.Admin;
+import com.example.floreria.controlador.catalogo.Catalogo;
+import com.example.floreria.modelo.Usuario;
 import com.google.android.material.textfield.TextInputLayout;
 
 import java.util.Map;
 
-// Vista de inicio de sesión
+// Vista de inicio de sesión y bienvenida inspirada en el prototipo
 public class Login extends AppCompatActivity {
 
     @Override
@@ -33,6 +34,18 @@ public class Login extends AppCompatActivity {
         TextInputLayout tilClave = findViewById(R.id.tilClaveLogin);
         Button btnIngresar = findViewById(R.id.btnIngresar);
         TextView tvRegistro = findViewById(R.id.tvIrRegistro);
+        View cardLogin = findViewById(R.id.cardLoginContainer);
+        Button btnComenzar = findViewById(R.id.btnComenzar);
+        TextView tvYaTengoCuenta = findViewById(R.id.tvYaTengoCuenta);
+
+        // Mostrar formulario de inicio de sesión al pulsar Comenzar o Ya tengo una cuenta
+        View.OnClickListener mostrarLogin = v -> {
+            cardLogin.setVisibility(View.VISIBLE);
+            cardLogin.requestFocus();
+        };
+
+        btnComenzar.setOnClickListener(mostrarLogin);
+        tvYaTengoCuenta.setOnClickListener(mostrarLogin);
 
         btnIngresar.setOnClickListener(v -> {
             String correo = etCorreo.getText().toString().trim();
@@ -61,9 +74,10 @@ public class Login extends AppCompatActivity {
             destino.putExtra("nombre", usuario.nombre);
             startActivity(destino);
 
-            // Se limpian los campos para que no queden al volver
+            // Se limpian los campos y se oculta el login al volver
             etCorreo.setText("");
             etClave.setText("");
+            cardLogin.setVisibility(View.GONE);
         });
 
         // Abre la pantalla de registro

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Logotipo: flor de cinco pétalos con dos hojas -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="120dp"
+    android:viewportWidth="120"
+    android:viewportHeight="120">
+
+    <!-- Hojas -->
+    <path
+        android:fillColor="@color/verde_oscuro"
+        android:pathData="M60,100 C48,100 40,108 38,116 C50,116 58,110 60,100 Z" />
+    <path
+        android:fillColor="@color/verde_suave"
+        android:pathData="M60,100 C72,100 80,108 82,116 C70,116 62,110 60,100 Z" />
+
+    <!-- Cinco pétalos -->
+    <path
+        android:fillColor="@color/rosa_fuerte"
+        android:pathData="M44,36 a16,16 0 1,0 32,0 a16,16 0 1,0 -32,0
+                          M66.8,52.6 a16,16 0 1,0 32,0 a16,16 0 1,0 -32,0
+                          M58.1,79.4 a16,16 0 1,0 32,0 a16,16 0 1,0 -32,0
+                          M29.9,79.4 a16,16 0 1,0 32,0 a16,16 0 1,0 -32,0
+                          M21.2,52.6 a16,16 0 1,0 32,0 a16,16 0 1,0 -32,0" />
+
+    <!-- Centro de la flor -->
+    <path
+        android:fillColor="#FFFFD54F"
+        android:pathData="M49,60 a11,11 0 1,0 22,0 a11,11 0 1,0 -22,0" />
+</vector>

@@ -1,83 +1,156 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Pantalla 4: Panel de administración -->
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFF0F5">
+    android:background="@color/rosa_fondo">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="20dp">
+        android:padding="16dp">
 
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Administración de Florería"
-            android:textColor="#C2185B"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:gravity="center"
-            android:layout_marginBottom="20dp"/>
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/tilNombreProd"
+            <ImageView
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:contentDescription="@string/descripcion_logo"
+                android:src="@drawable/ic_logo_flor" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:text="@string/admin_titulo"
+                android:textColor="@color/rosa_fuerte"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvSalirAdmin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="@string/admin_salir"
+                android:textColor="@color/rosa_oscuro"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="70dp"
+            android:layout_height="3dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:background="@color/verde_suave" />
+
+        <!-- Formulario -->
+        <com.google.android.material.card.MaterialCardView
+            style="@style/Tarjeta.Floreria"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Nombre del producto">
+            android:layout_height="wrap_content">
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/etNombreProd"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <EditText
-            android:id="@+id/etDescProd"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Descripción del producto"
-            android:inputType="textCapSentences"
-            android:layout_marginTop="10dp"/>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/tilPrecioProd"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Precio">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/etPrecioProd"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="numberDecimal"/>
+                android:orientation="vertical"
+                android:padding="20dp">
 
-        </com.google.android.material.textfield.TextInputLayout>
+                <TextView
+                    android:id="@+id/tvTituloFormulario"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:text="@string/admin_nuevo"
+                    android:textColor="@color/rosa_oscuro"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
 
-        <Button
-            android:id="@+id/btnAgregar"
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilNombreProd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/admin_nombre">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etNombreProd"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textCapSentences"
+                        android:textColor="@color/texto_principal" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilDescProd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:hint="@string/admin_descripcion">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etDescProd"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textMultiLine|textCapSentences"
+                        android:minLines="2"
+                        android:textColor="@color/texto_principal" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilPrecioProd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:hint="@string/admin_precio"
+                    app:prefixText="$">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etPrecioProd"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
+                        android:textColor="@color/texto_principal" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnGuardar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:text="@string/admin_guardar" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnCancelarEdicion"
+                    style="@style/Boton.Floreria.Borde"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/admin_cancelar"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/admin_registrados"
+            android:textColor="@color/rosa_oscuro"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvAdmin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Agregar producto"
-            android:backgroundTint="#E91E63"
-            android:layout_marginTop="15dp"/>
-
-        <ListView
-            android:id="@+id/lvAdmin"
-            android:layout_width="match_parent"
-            android:layout_height="250dp"
-            android:layout_marginTop="15dp"/>
-
-        <Button
-            android:id="@+id/btnSalirAdmin"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Cerrar sesión"
-            android:backgroundTint="#AD1457"
-            android:layout_marginTop="15dp"/>
-
+            android:nestedScrollingEnabled="false" />
     </LinearLayout>
-
 </ScrollView>

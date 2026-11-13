@@ -3,32 +3,29 @@
 
     <application
         android:allowBackup="true"
-        android:label="Florería"
+        android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.Floreria">
 
         <activity
-            android:name=".Vista.Admin"
+            android:name=".controlador.administracion.Admin"
             android:exported="false" />
 
         <activity
-            android:name=".Vista.Catalogo"
+            android:name=".controlador.catalogo.Catalogo"
             android:exported="false" />
 
         <activity
-            android:name=".Vista.Registro"
+            android:name=".controlador.autenticacion.Registro"
             android:exported="false" />
 
         <activity
-            android:name=".Vista.Login"
+            android:name=".controlador.autenticacion.Login"
             android:exported="true">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
 
     </application>

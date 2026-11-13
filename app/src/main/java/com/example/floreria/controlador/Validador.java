@@ -1,4 +1,4 @@
-package com.example.floreria.Controlador;
+package com.example.floreria.controlador;
 
 import android.util.Patterns;
 
@@ -38,6 +38,12 @@ public class Validador {
         }
         if (!hayLetra) return "Debe incluir al menos una letra";
         if (!hayNumero) return "Debe incluir al menos un número";
+        return null;
+    }
+
+    public static String confirmar(String clave, String confirmar) {
+        if (confirmar.isEmpty()) return "Confirma tu contraseña";
+        if (!clave.equals(confirmar)) return "Las contraseñas no coinciden";
         return null;
     }
 

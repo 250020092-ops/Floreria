@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="purple_200">#FFBB86FC</color>
-    <color name="purple_500">#FF6200EE</color>
-    <color name="purple_700">#FF3700B3</color>
-    <color name="teal_200">#FF03DAC5</color>
-    <color name="teal_700">#FF018786</color>
+    <!-- Paleta de Florería Las Amiguitas -->
+    <color name="rosa_fondo">#FFFFF0F5</color>      <!-- fondo de pantallas -->
+    <color name="rosa_pastel">#FFF8BBD0</color>     <!-- detalles suaves, divisores -->
+    <color name="rosa_fuerte">#FFE91E63</color>     <!-- botones y acentos -->
+    <color name="rosa_oscuro">#FFAD1457</color>     <!-- títulos y enlaces -->
+    <color name="verde_suave">#FFA5D6A7</color>     <!-- detalles florales -->
+    <color name="verde_oscuro">#FF2E7D32</color>    <!-- hojas, precios, acentos verdes -->
+    <color name="texto_principal">#FF4A2A36</color>
+    <color name="texto_secundario">#FF8D6E78</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 </resources>
